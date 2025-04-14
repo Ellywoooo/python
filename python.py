@@ -4,7 +4,7 @@ temp = np.array([12,23,23,34,13,17,20])
 
 #print average temp for week
 ave_temp = np.mean(temp)
-print(ave_temp)
+print(f"{ave_temp:.2f}")
 
 #finding the maximun temp
 max_temp = np.max(temp)
