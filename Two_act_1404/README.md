@@ -2,7 +2,9 @@ import numpy as np
 
 # ---- Act 1 ----
 # Create a NumPy array of the first 10 positive integers.
+## Create the array
 arr = np.array([1,3,5,7,9,10,12,14,16,18])
+
 
 print("---- Act one ----")
 # 1.1 Print the array
