@@ -1,6 +1,6 @@
 def rectangle(x,y):
-    print("round():",round(x * x))
-    print("abs()",abs(x * x))
+    print("round():",round(x * y))
+    print("abs()",abs(x * y))
 
 
 width = float(input("What's the width?"))
