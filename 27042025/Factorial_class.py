@@ -7,7 +7,7 @@ class Factorial:
 
     #initalize
     def __init__(self,num):
-        self.num = num
+            self.num = num
 
     # Method
     def factorial(self):
@@ -18,15 +18,16 @@ class Factorial:
         print(f"{i}! is {fac}")
         
     def primeFactorial(self):
-
-        if 0 < self.num < 3:
+        
+        # if number is 2 or 3
+        if 0 < self.num < 4:
             print((f"{self.num} is prime number"))
 
         elif (self.num % 2) == 0 or (self.num % 3) == 0:
-            print(f"{self.num} is prime number")
+            print(f"{self.num} is not prime number")
 
         else:
-            print(f"{self.num} is not prime number")
+            print(f"{self.num} is prime number")
 
 
 '''
