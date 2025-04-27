@@ -6,8 +6,18 @@
 class Factorial:
 
     #initalize
-    def __init__(self,num):
-            self.num = num
+    def __init__(self):
+        self.num = 0
+
+    def InputNumber(self):
+        
+        self.num = int(input("What's the number? "))
+
+        if self.num <= 0:
+            print("Please input positive intergar")
+            self.InputNumber()
+        else:
+            return True
 
     # Method
     def factorial(self):
@@ -30,27 +40,10 @@ class Factorial:
             print(f"{self.num} is prime number")
 
 
-'''
-    def primeFactorial(self):
-        
-        prime = int(input("Enter the number you want to check prime number: "))
-        
-        if prime == 2 or prime == 3:
-            print((f"{prime} is prime number"))
-
-        elif (prime % 2) != 0 or (prime % 3) != 0:
-            print(f"{prime} is prime number")
-
-        else:
-            print(f"{prime} is not prime number")
-'''
-
-
-
-number = int(input("What's the number? "))
 
 # Create object
-fact = Factorial(number)
+fact = Factorial()
+fact.InputNumber()
 fact.factorial()
 fact.primeFactorial()
 
