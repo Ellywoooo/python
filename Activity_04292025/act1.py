@@ -5,7 +5,9 @@ class Books:
 
     #Constructor
     def __init__(self):
-        print("Welcom to library! ")
+        print("******************************")
+        print("***** Welcom to library! *****")
+        print("******************************")
         self.books = []
 
     def add_Book(self):
@@ -25,11 +27,32 @@ class Books:
 
     def show_Book(self):
 
-        print("------- Showing the book list in library -------")
+        print("\n----------- Book list -----------\n")
         for i in self.books:
             print(i)
 
+    def options(self):
+        
+        while True:
+            print("\n----------- Options -----------")
+            print("\n\t(1) Add book")
+            print("\t(2) Show book list")
+            print("\t(3) Exit\n")
+            print("-------------------------------")
+
+            number = input("---- Choose the option! ----\n-->")
+
+            if number == "1":
+                self.add_Book()
+            elif number == "2":
+                self.show_Book()
+            elif number =="3":
+                print("Close the systme..")
+                break
+            else:
+                print("Please choose the number 1-3 !")        
+            
+
 #Create object
 newbook = Books()
-newbook.add_Book()
-newbook.show_Book()
+newbook.options()
