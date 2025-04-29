@@ -29,16 +29,12 @@ class Factorial:
         
     def primeFactorial(self):
         
-        # if number is 2 or 3
-        if 0 < self.num < 4:
-            print((f"{self.num} is prime number"))
-
-        elif (self.num % 2) == 0 or (self.num % 3) == 0:
-            print(f"{self.num} is not prime number")
-
-        else:
-            print(f"{self.num} is prime number")
-
+            for num in range(2, int(self.num**0.5)+ 1):
+                
+                if self.num % num == 0:
+                    print(f"{self.num} is not prime number")
+                else:
+                    print(f"{self.num} is prime number")
 
 
 # Create object
