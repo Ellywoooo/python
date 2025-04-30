@@ -3,31 +3,34 @@
 
 class Factorial:
 
-    def factorial_Prime(number):  
+    def factorial(number):  
         
         # Factorial check
         result = 1  
-        #number = int(input("Enter the number you wat to check if it is Factorial and Prime: "))
-
         for i in range(1, number + 1):
             result *= i
-        print("Factorial of", number, "is", result)
-   
-        # Prime check
-
+        return result
+    
+    # Prime check
+    def Prime(number):
         # 0, 1 is not prime number
         if number < 2:  
-            print(f"{number} is not a prime number.")
+            return False
 
         else:
             for i in range(2, int(number ** 0.5) + 1): 
                 if number % i == 0:
-                    print(f"{number} is not a prime number.")
-                    break
-                else:
-                    print(f"{number} is a prime number.")
-                    break
+                    return False
+            return True
+    
+    def displayResult(number):
+        print("Factorial of", number, "is", Factorial.factorial(number))
 
-Factorial.factorial_Prime(66)
+        if Factorial.factorial(number) == False:
+            print(f"{number} is not a prime number.")
+        else:
+            print(f"{number} is a prime number.")
+
+Factorial.displayResult(67)
 
  
