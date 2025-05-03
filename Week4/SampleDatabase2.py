@@ -1,6 +1,7 @@
 import pandas as pd
 
-# Using pyarrow or fastparquet backend
+# Using pyarrow backend
 df = pd.read_parquet("Sample_data_2.parquet")
 
-print(df)  # Display first few rows
+# Display all  
+print(df)
