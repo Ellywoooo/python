@@ -1,5 +1,5 @@
 from database import create_table
-from user_manager import add_user, view_users, search_user, delete_user
+from user_manager import add_user, view_users, search_user, delete_user, advanced_user
 
 def menu():
     print("\n==== User Manager ====")
@@ -8,12 +8,13 @@ def menu():
     print("3. Search User by Name")
     print("4. Delete User by ID")
     print("5. Exit")
+    print("6. Advanced search User by ID and name") # New feature
 
 def main():
     create_table()
     while True:
         menu()
-        choice = input("Select an option (1-5): ")
+        choice = input("Select an option (1-6): ")
         if choice == '1':
             name = input("Enter name: ")
             email = input("Enter email: ")
@@ -33,6 +34,12 @@ def main():
         elif choice == '5':
             print("Goodbye!")
             break
+        elif choice == '6':
+            name = input("Enter name to search: ")
+            user_id = int(input("Enter ID to serach: "))
+            users = advanced_user(name, user_id)
+            for user in users:
+                print(user)
         else:
             print("Invalid choice, try again.")
 

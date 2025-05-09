@@ -35,3 +35,11 @@ def delete_user(user_id):
     conn.commit()
     conn.close()
     print("🗑️ User deleted.")
+    
+def advanced_user(name, user_id):
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE id = ? AND name LIKE ?", ( user_id, '%' + name + '%',))
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
