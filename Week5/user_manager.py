@@ -36,6 +36,7 @@ def delete_user(user_id):
     conn.close()
     print("🗑️ User deleted.")
     
+# Search the user based on ID and name   
 def advanced_user(name, user_id):
     conn = create_connection()
     cursor = conn.cursor()
