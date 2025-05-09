@@ -1,7 +1,10 @@
 class User:
 
     def __init__(self):
-        print("User class")
+
+        self.user_id = None
+        self.user_name = None
+        
 
 
 def main():
