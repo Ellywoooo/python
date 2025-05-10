@@ -15,8 +15,8 @@ def menu():
     print("3. Search User by Name")
     print("4. Delete User by ID")
     print("5. Exit")
-    print("6. Advanced search User by ID and name") # New feature
-    print("7. Search User by course_id and name")
+    print("6. Advanced search User by ID and name") # Activity 2
+    print("7. Search User by course_id and name") # Activity 3
     print("\n==== Course Manager ====")
     print("Add your course blow....") 
     print("8. Add Course")
@@ -49,6 +49,7 @@ def main():
         elif choice == '5':
             print("Goodbye!")
             break
+        # Activity 2
         elif choice == '6':
             name = input("Enter name to search: ")
             user_id = int(input("Enter ID to serach: "))

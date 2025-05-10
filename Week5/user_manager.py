@@ -37,7 +37,7 @@ def delete_user(user_id):
     conn.close()
     print("🗑️ User deleted.")
 
-# Search the user based on ID and name   
+# Activity 2 - Search the user based on ID and name   
 def advanced_user(name, user_id):
     conn = create_connection()
     cursor = conn.cursor()
@@ -46,7 +46,7 @@ def advanced_user(name, user_id):
     conn.close()
     return rows
 
-# Search the user based on course_id and user name   
+# Activity 3 - Search the user based on course_id and user name   
 def course_id_name_user(name, course_id):
     conn = create_connection()
     cursor = conn.cursor()
