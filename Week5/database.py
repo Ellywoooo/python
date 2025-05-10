@@ -12,7 +12,17 @@ def create_table():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
             email TEXT NOT NULL UNIQUE
-        )
+        )    
     ''')
+    cursor.execute('''
+            CREATE TABLE IF NOT EXISTS courses (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            unit TEXT NOT NULL
+        )  
+    ''')
+
+
+
     conn.commit()
     conn.close()
