@@ -49,7 +49,7 @@ def main():
         elif choice == '5':
             print("Goodbye!")
             break
-        # Activity 2
+        # Activity 2 / user_manager.py
         elif choice == '6':
             name = input("Enter name to search: ")
             user_id = int(input("Enter ID to serach: "))
@@ -57,7 +57,7 @@ def main():
             for user in users:
                 print(user)
         
-        # Activity 3 (search based on course_ID and user name)
+        # Activity 3 (search based on course_ID and user name/ user_manager.py)
         elif choice == '7':
             name = input("Enter name to search: ")
             course_id = input("Enter course id to serch: ")
