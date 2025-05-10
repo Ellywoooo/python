@@ -1,13 +1,13 @@
 from database import create_connection
 import sqlite3
 
-def add_course_user(name, unit):
+def add_course_user(course, unit):
     conn = create_connection()
     cursor = conn.cursor()
     try:
-        cursor.execute("INSERT INTO courses (name, unit) VALUES (?, ?)", (name, unit))
+        cursor.execute("INSERT INTO courses (course, unit) VALUES (?, ?)", (course, unit))
         conn.commit()
-        print(" User added successfully.")
+        print(" Course added successfully.")
     except sqlite3.IntegrityError:
         print(" Error")
     conn.close()
@@ -27,3 +27,11 @@ def view_course_users():
     rows = cursor.fetchall()
     conn.close()
     return rows
+
+#def delete_user():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("DROP TABLE IF EXISTS courses")
+    conn.commit()
+    conn.close()
+    print("🗑️ User deleted.")

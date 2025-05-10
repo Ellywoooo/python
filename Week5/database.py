@@ -11,14 +11,16 @@ def create_table():
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
-            email TEXT NOT NULL UNIQUE
+            email TEXT NOT NULL UNIQUE,
+            course_id INTEGER NOT NULL,
+            FOREIGN KEY (course_id) REFERENCES courses (id)
         )    
     ''')
     cursor.execute('''
             CREATE TABLE IF NOT EXISTS courses (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            unit TEXT NOT NULL
+            course TEXT NOT NULL,
+            unit INTEGER NOT NULL         
         )  
     ''')
 
