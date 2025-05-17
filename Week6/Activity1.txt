@@ -1,0 +1,6 @@
+1. admin and staff member can accept and reject the booking.
+2. admin and staff member can rearrage the booking.
+3. customer can cancel the booking.
+4. admin can access any branch's booking but staff member only access 
+	their branch's booking.
+5. admin can access every booking history.
