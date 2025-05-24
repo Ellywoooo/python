@@ -4,7 +4,7 @@
 from abc import ABC, abstractmethod
  
  #abstrctmethod has to be implemented in sub class
- #
+ # If the class has abstractedmethod, can be made object
 class Factory(ABC):
    
     @abstractmethod
