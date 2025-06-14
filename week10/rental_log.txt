@@ -1,3 +1,7 @@
 [2025-06-14 12:28:31] [event] User: id - message
 [2025-06-14 12:28:39] [event] User: id - message
 [2025-06-14 12:30:17] [event] User: id - message
+2025-06-14 22:16:57.559950 - Viewed available cars
+2025-06-14 22:17:24.490311 - Viewed available cars
+2025-06-14 22:17:24.490311 - user1 rented CAR003
+2025-06-14 22:17:37.410897 - user1 returned CAR003

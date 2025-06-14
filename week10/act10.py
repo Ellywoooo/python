@@ -6,7 +6,7 @@ import datetime
 def main():
 
     log_event("event", "id", "message")
-
+    
  
 def log_event(event_type, user_id, message):
     """Logs an event to a file with timestamp, event type, user ID, and message."""
