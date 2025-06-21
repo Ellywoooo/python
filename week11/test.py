@@ -15,7 +15,7 @@ class TestMathOperations(unittest.TestCase):
         # add(-1,1) = 0 and expected value is 0
         self.assertEqual(add(-1, 1), 0)
 
-        # add(2,-1) = 1 and expected value is 4
+        # Fail case: add(2,-1) = 1 and expected value is 4
         self.assertEqual(add(2, -1), 4)       
 
 if __name__ == "__main__":
