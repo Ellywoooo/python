@@ -5,7 +5,7 @@ def add(x,y):
 
 
 '''
-This is a nuit test of the add function.
+This is a unit test of the add function.
 It checks if the result of add(x,y) matches the expected value.
 '''
 class TestMathOperations(unittest.TestCase):
