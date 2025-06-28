@@ -24,6 +24,7 @@ def img():
     if request.method == "GET":
         # If the request method is GET, render the upload form(first time).
         # Display the form for uploading an image.
+        # The form gets the image file from the user when the user submits(POST).
         return render_template_string("""
             <h1 style="font-family:sans-serif;color:#2c3e50;">Please upload an image</h1>
             <form method="post" enctype="multipart/form-data" style="background:#f4f4f4;padding:30px;border-radius:10px;box-shadow:0 2px 8px #ccc;display:inline-block;">
