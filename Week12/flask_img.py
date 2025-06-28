@@ -1,5 +1,5 @@
 from flask import Flask, render_template_string, request
-import os
+import os # Flask app save uploaded files to the correct folder on computer
 
 app = Flask(__name__)
 
@@ -18,8 +18,19 @@ and display it on the browser. Share your GitHub link and screenshot of your res
 # "/" route accepts GET and POST methods.
 @app.route("/", methods=["GET", "POST"])
 def img():
+    
+    if request.method == "GET":
+        # If the request method is GET, render the upload form(first time).
+        # Display the form for uploading an image.
+        return render_template_string("""
+            <h1>Please upload an image</h1>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit">Upload Photo</button>
+            </form>
+        """)
     # If the request method is POST, it means an image has been uploaded.
-    if request.method == "POST":
+    elif request.method == "POST":
         # Retrieves the uploaded file from the request.
         file = request.files['image']
         # if a file is provided, save it to the upload folder.
@@ -31,15 +42,7 @@ def img():
                 <h1>Image Uploaded!</h1>
                 <img src="{{ url_for('static', filename='uploads/' + filename) }}" style="max-width:300px;max-height:300px;">
             """, filename=file.filename)
-    # If the request method is GET, render the upload form(first time).
-    # Display the form for uploading an image.
-    return render_template_string("""
-        <h1>Please upload an image</h1>
-        <form method="post" enctype="multipart/form-data">
-            <input type="file" name="image" accept="image/*" required>
-            <button type="submit">Upload Photo</button>
-        </form>
-    """)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
