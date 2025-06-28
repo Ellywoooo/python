@@ -20,6 +20,7 @@ and display it on the browser. Share your GitHub link and screenshot of your res
 @app.route("/", methods=["GET", "POST"])
 def img():
     
+    # GET method is the default method when a user first visits the page.
     if request.method == "GET":
         # If the request method is GET, render the upload form(first time).
         # Display the form for uploading an image.
