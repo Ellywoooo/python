@@ -4,12 +4,13 @@ import os # Flask app save uploaded files to the correct folder on computer
 app = Flask(__name__)
 
 # Sets the folder where uploaded images will be saved.
+# The static folder is a common place to store static files like images.
 UPLOAD_FOLDER = 'static/uploads'
-# Ensure the upload folder exists
+# Check the upload folder exists
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # Stores the upload folder path in the Flask app configuration.
+# This allows the app to access the upload folder easily.
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
 '''
 Develop a Flask web application that allows users to upload an image
 and display it on the browser. Share your GitHub link and screenshot of your result.
@@ -23,10 +24,13 @@ def img():
         # If the request method is GET, render the upload form(first time).
         # Display the form for uploading an image.
         return render_template_string("""
-            <h1>Please upload an image</h1>
-            <form method="post" enctype="multipart/form-data">
-                <input type="file" name="image" accept="image/*" required>
-                <button type="submit">Upload Photo</button>
+            <h1 style="font-family:sans-serif;color:#2c3e50;">Please upload an image</h1>
+            <form method="post" enctype="multipart/form-data" style="background:#f4f4f4;padding:30px;border-radius:10px;box-shadow:0 2px 8px #ccc;display:inline-block;">
+                <input type="file" name="image" accept="image/*" required style="margin-bottom:15px;padding:8px;border-radius:5px;border:1px solid #ccc;">
+                <br>
+                <button type="submit" style="background:#3498db;color:white;padding:10px 20px;border:none;border-radius:5px;font-size:16px;cursor:pointer;transition:background 0.3s;">
+                    &#128247; Upload Photo
+                </button>
             </form>
         """)
     # If the request method is POST, it means an image has been uploaded.
